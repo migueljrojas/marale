@@ -1,0 +1,19 @@
+mixin scroll-bar(mode)
+
+    if  mode == 'compact'
+        .scroll-bar.scroll-bar--compact
+            .scroll-bar__controls
+                a.scroll-bar__control.scroll-bar__control--up(href="#")
+                a.scroll-bar__control.scroll-bar__control--down(href="#")
+    else 
+        .scroll-bar
+            .container
+                .row
+                    .col-xs-24.scroll-bar__col
+                        span.scroll-bar__section-name.-hidden 
+                        .scroll-bar__controls
+                            a.scroll-bar__control.scroll-bar__control--up(href="#")
+                            a.scroll-bar__control.scroll-bar__control--down(href="#")
+
+                    
+    

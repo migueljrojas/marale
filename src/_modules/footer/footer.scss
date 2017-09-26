@@ -1,1 +1,73 @@
-// footer styles
+.footer {
+    background: $bgSecondary;
+    padding: 40px 0;
+    color: $white;
+    text-align: center;
+    font-size: $xs;
+    font-weight: 300;
+
+    a{
+        color:$white;
+        display: block;
+        margin-bottom: 5px;
+
+        &:hover {
+            color:$lightGray;
+        }
+    }
+
+    &__logo {
+        margin-bottom: 30px;
+
+        img {
+            height: 75px;
+            width: auto;
+        }
+    }
+
+    &__data {
+        margin-bottom: 20px;
+    }
+
+    &__address {
+        margin: 0 0 5px;
+    }
+
+    &__social {
+        color:$white;
+
+        &__list {
+            display: flex;
+            justify-content: center;
+
+            li{
+                margin-right: 20px;
+            }
+
+            a{
+                font-size: $sm;
+                color:$white;
+                padding: 5px;
+            }
+        }
+    }
+
+    &__nav {
+
+    }
+
+    &__menu {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        li{
+            margin: 0 15px 20px 0;
+        }
+
+        a{
+            font-weight: 700;
+            text-transform: uppercase;
+        }
+    }
+}

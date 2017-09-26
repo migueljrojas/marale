@@ -1,6 +1,4 @@
-mixin slider(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
-
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the slider module
+mixin slider(klass)
+    ._slider(class=klass)
+        if block
+            block

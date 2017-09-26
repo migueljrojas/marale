@@ -1,0 +1,48 @@
+{
+    "hero":{
+        "title":"Marale Wine Hotel & Boutique"
+    },
+    "viva":{
+        "title": "Franc 162",
+        "text":"Nuestro restaurante gourmet debe su nombre a uno de nuestros varietales emblema y a la numeración de la ruta 162 por donde llegan nuestros visitantes."
+    },
+    "showcase":{
+        "title":"INTREPIDA PROPUESTA GASTRONÓMICA",
+        "desc":"Nuestros visitantes viven un momento donde los sentidos se multiplican. Platos únicos, el mejor vino del Valle de Pedernal, los mejores shows en vivo y un paisaje inolvidable.",
+        "list":[
+            {
+                "img":"/images/resto/ceviche.jpg"
+            },
+            {
+                "img":"/images/resto/pablo.jpg"
+            },
+            {
+                "img":"/images/resto/interior.jpg"
+            },
+            {
+                "img":"/images/resto/botellas.jpg"
+            }
+        ]
+    },
+    "experience":{
+        "title":"El pilar de Franc162 es...",
+        "desc": "...que cada receta está creada a partir de ingredientes naturales y frescos cosechados especialmente para nosotros.",
+        "slider":[
+            {
+                "img":"/images/resto/slide1.jpg"
+            },
+            {
+                "img":"/images/resto/slide2.jpg"
+            },
+            {
+                "img":"/images/resto/slide3.jpg"
+            },
+            {
+                "img":"/images/resto/slide4.jpg"
+            }
+        ]
+    },
+    "dishes":{
+        "text":"Enfocado especialmente en productos regionales característicos de San Juan, ha elaborado una selección de menús maridados con vinos de nuestra bodega para el disfrute de los visitantes en cada momento del año."
+    }
+}

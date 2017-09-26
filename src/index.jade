@@ -1,15 +1,137 @@
 extends _layouts/base
 
-include _modules/link/link
+include _modules/slider/slider
+include _modules/scroll-bar/scroll-bar
+
+block meta
+    meta(name="keywords", content="San juan, marale, bodega, sarmiento, valle de pedernal, pedernal, cordillera, andes, vino sanjuanino, malbec, cabernet franc, zonda, valle tulum, franc162, hotel boutique, wine hotel, hotel, lujo, alejandro castro, marale wines")
 
 block content
-  .container
-    .yeogurt-info
-      h1 Welcome to Yeogurt!
-      p.
-        Take a look at the
-        #[+link({text: 'documentation'})(href='https://github.com/larsonjj/generator-yeogurt#yeogurt-generator---')]
-        and start mixing up something awesome.
-      p
-        img.logo(src="images/yeogurt-swirl.png", width="75px")
-  code.version v2.0.0
+    main.home
+        section#hero.home__hero
+            +slider('home__hero__slider')
+                each slide in site.data.home.hero.slider
+                    .home__hero__slide
+                        img(src=slide.img)
+                        .home__hero__slide__overlay
+            .home__hero__data
+                h1.home__hero__title= site.data.home.hero.title
+                p.home__hero__desc= site.data.home.hero.desc
+                
+        section#marale.home__marale(data-name="Bodega")
+            .container
+                .row
+                    .col-xs-24.col-sm-10
+                        .home__marale__data.wow.fadeInUpBig
+                            h2.home__marale__title= site.data.home.marale.title
+                            p.home__marale__text= site.data.home.marale.desc
+                            a._button.-white(href=site.data.home.marale.button.url)= site.data.home.marale.button.text
+                        img.home__marale__img.img-responsive.wow.fadeInUpBig(src="/images/home/marale2.jpg")
+                    .col-xs-24.col-sm-14
+                        img.home__marale__img.img-responsive.wow.fadeInUpBig(src="/images/home/marale1.jpg")
+                        img.home__marale__img.img-responsive.wow.fadeInUpBig(src="/images/home/marale3.jpg")
+                        .row
+                            .col-xs-24.col-sm-10
+                                img.home__marale__img.img-responsive.wow.fadeInUpBig(src="/images/home/marale4.jpg")
+                            .col-xs-24.col-sm-14.home__marale__content
+                                each p in site.data.home.marale.content
+                                    p.home__marale__text.wow.fadeInUpBig= p
+                            
+        section#places.home__places(data-name="Nuestro Hogar")
+            .home__places__col.home__places__col--resto
+                .home__places__overlay
+                .home__places__data
+                    img.home__places__logo(src=site.data.home.places.resto.logo)
+                    p.home__places__desc= site.data.home.places.resto.desc
+                    a._button.-white(href=site.data.home.places.resto.button.url)= site.data.home.places.resto.button.text
+                    
+            .home__places__col.home__places__col--hotel
+                .home__places__overlay
+                .home__places__data
+                    img.home__places__logo(src=site.data.home.places.hotel.logo)
+                    p.home__places__desc= site.data.home.places.hotel.desc
+                    a._button.-white(href=site.data.home.places.hotel.button.url)= site.data.home.places.hotel.button.text
+
+        section#vinos.home__wine(data-name="Vinos")
+            ul.home__wine__bottles
+                each bottle in site.data.home.wine.bottles
+                    li.home__wine__bottle
+                        .home__wine__bottle__outer
+                            h3.home__wine__bottle__name= bottle.name
+                            img.home__wine__bottle__img(src=bottle.img)
+                            a._button.-white.home__wine__bottle__trigger(href=bottle.button.url)= bottle.button.text
+                        .home__wine__bottle__inner
+                            a.home__wine__bottle__close
+                                span
+                                span
+                            .home__wine__bottle__inner__wrapper
+                                h3.home__wine__bottle__name.home__wine__bottle__name--inner= bottle.name
+                                p.home__wine__bottle__desc= bottle.desc
+                                ul.home__wine__bottle__list
+                                    li
+                                        | Composición:
+                                        | #{bottle.ficha.data.composicion}
+                                    li
+                                        | Origen: #{bottle.ficha.data.origen}
+                                    if bottle.ficha.data.crianza
+                                        li
+                                            | Crianza: #{bottle.ficha.data.crianza}
+                                        li
+                                            | Estiba: #{bottle.ficha.data.estiba}
+                                        li
+                                            | Potencial de guarda: #{bottle.ficha.data.guarda}
+                                    
+                                a._button.-white(href=bottle.ficha.url, target="_blank")
+                                    i.fa.fa-file
+                                    | Ficha técnica
+                        
+        section#valle.home__valle(data-name="Valle de Pedernal")
+            article.home__valle__section.home__valle__section--one
+                .container
+                    .row
+                        .col-xs-24.col-sm-10.col-md-8.home__valle__section__col
+                            .home__valle__section__data
+                                h3.home__valle__section__title UN VALLE DE ALTURA
+                                p.home__valle__section__desc El Valle de Pedernal, dónde crecen nuestras mejores uvas, es un paraíso vitivinícola que se encuentra a unos 1.400 MSNM, a unos 33km de nuestra bodega en Sarmiento.
+                
+            article.home__valle__section.home__valle__section--two
+                .container
+                    .row
+                        .col-xs-24.col-sm-10.col-md-8.pull-right.home__valle__section__col
+                            .home__valle__section__data
+                                h3.home__valle__section__title TESORO ESCONDIDO
+                                p.home__valle__section__desc Protegido por cerros y montañas que superan los 2.500 metros de altura, el Valle de Pedernal  se caracteriza por un clima más fresco que la media cuyana. Su amplitud térmica es debida al eje de vientos norte-sur.
+                        
+            article.home__valle__section.home__valle__section--three
+                .container
+                    .row
+                        .col-xs-24.col-sm-10.col-md-8.home__valle__section__col
+                            .home__valle__section__data
+                                h3.home__valle__section__title UNA BÚSQUEDA BAJO TIERRA
+                                p.home__valle__section__desc Sus suelos, de tipo aluvial, están compuestos por gravas angulosas y planas, entre las que se encuentra el calcáreo y el sílex (o Pedernal), con arena, limo y arcilla.
+
+        section#contacto.home__contact
+            .home__contact__col.home__contact__col--form
+                .home__contact__container
+                    h2.home__contact__title Contacto
+                    form.home__contact__form.clearfix
+                        .home__contact__group
+                            label.home__contact__label Nombre
+                            input.home__contact__input(type="text")
+                        .home__contact__group
+                            label.home__contact__label Apellido
+                            input.home__contact__input(type="text")
+                        .home__contact__group
+                            label.home__contact__label Email
+                            input.home__contact__input(type="email")
+                        .home__contact__group
+                            label.home__contact__label Mensaje
+                            input.home__contact__input(type="textarea")
+                        
+                        button._button.-black Enviar
+                        
+            .home__contact__col.home__contact__col--img
+                a(href="https://www.google.com.ar/maps/place/Bodega+Marale/@-32.1624536,-68.5545858,9z/data=!4m5!3m4!1s0x9680e3d29cf789ef:0x57700332ca9f61fa!8m2!3d-31.944329!4d-68.417874", target="_blank")
+                    img.home__contact__img(src="/images/home/mapa.jpg")
+
+    +scroll-bar

@@ -1,0 +1,107 @@
+{
+    "hero":{
+        "title":"Marale Wine Hotel & Boutique"
+    },
+    "viva":{
+        "title": "Viva Marale 360º",
+        "text": [
+            "La experiencia Marale demandaba un alojamiento para hospedar a los visitantes y que así puedan vivir noches y amaneceres únicos. Además, poder visitar los atractivos turísticos de los alrededores, como lo es nuestro Valle de Pedernal.",
+            "El Marale Wine-Hotel Boutique es un establecimiento de elite, con un ambiente moderno, servicio personalizado y diseño sofisticado para los viajeros más exigentes."
+        ]
+    },
+    "showcase":[
+        {
+            "img":"/images/hotel/habitacion1-1.jpg",
+            "title":"Suite Magnum",
+            "desc":"5 unidades de 30m2, totalmente equipadas para que disfrute una estadía inolvidable."
+        },
+        {
+            "img":"/images/hotel/habitacion1-2.jpg",
+            "title":"Suite Magnum",
+            "desc":"5 unidades de 30m2, totalmente equipadas para que disfrute una estadía inolvidable."
+        },
+        {
+            "img":"/images/hotel/habitacion2-1.jpg",
+            "title":"Suite Doble Magnum",
+            "desc":"4 unidades de 45m2, equipadas especialmente para público exigente y con hidromasaje."
+        },
+        {
+            "img":"/images/hotel/habitacion2-2.jpg",
+            "title":"Suite Doble Magnum",
+            "desc":"4 unidades de 45m2, equipadas especialmente para público exigente y con hidromasaje."
+        },
+        {
+            "img":"/images/hotel/habitacion3-1.jpg",
+            "title":"Suite Imperial",
+            "desc":"1 unidad pronta a estrenar que realzará sus sentidos."
+        }
+    ],
+    "experience":{
+        "title":"Experiencia única",
+        "desc": "Amanezca mirando la cordillera en habitaciones especialmente diseñadas para maximizar su estadía en un entorno íntimo, abrazado por nuestros viñedos."
+    },
+    "features":{
+        "title":"10 habitaciones con máxima calidad y confort que cuentan con:",
+        "subtitle":"Además...",
+        "list":[
+            {
+                "icon":"coffe",
+                "text":"Menú de desayuno personalizado"
+            },
+            {
+                "icon":"glass",
+                "text":"Copa de Bienvenida"
+            },
+            {
+                "icon":"safe",
+                "text":"Caja de Seguridad Digital"
+            },
+            {
+                "icon":"tv",
+                "text":"LCD con Direct TV"
+            },
+            {
+                "icon":"desk",
+                "text":"Escritorio de Trabajo"
+            },
+            {
+                "icon":"drinks",
+                "text":"Frigobar"
+            },
+            {
+                "icon":"hairdryer",
+                "text":"Secador de Cabello"
+            },
+            {
+                "icon":"roomservice",
+                "text":"Servicio de room service"
+            }
+        ],
+        "extra":[
+            {
+                "icon":"wifi",
+                "text":"Wi-Fi sin cargo en todas las áreas del hotel"
+            },
+            {
+                "icon":"food",
+                "text":"Restaurant Gourmet (Franc 162)"
+            },
+            {
+                "icon":"mountain",
+                "text":"Terraza panorámica con privilegiadas vistas a nuestros viñedos y la cordillera  de los Andes"
+            },
+            {
+                "icon":"brush",
+                "text":"Improntas de Arte"
+            },
+            {
+                "icon":"boat",
+                "text":"Actividades en la zona"
+            },
+            {
+                "icon":"corkscrew",
+                "text":"Experiencia de Enoturismo"
+            }
+        ]
+    }
+}

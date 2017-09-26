@@ -1,0 +1,79 @@
+// scroll-bar styles
+.scroll-bar {
+
+    $s: &;
+
+    position: fixed;
+    left:0;
+    right:0;
+    height: 40px;
+    bottom:0;
+    background: $black;
+    color: $white;
+    padding: 3px 0 0;
+    z-index: 1000;
+
+    &__col {
+        display: flex;
+        align-items: center;
+    }
+
+    &__section-name {
+        @include title($xl);
+        @include trans;
+        font-weight: 700;
+        margin: 0;
+
+        @include mq(sm){
+            text-align: center;
+        }
+
+        &.-hidden {
+            opacity: 0;
+        }
+    }
+
+    &__controls {
+        position: absolute;
+        right:0;
+        top:0;
+        bottom:0;
+        padding-right: 20px;
+    }
+
+    &__control--up {
+        @include caret(up);
+
+        &.-disabled {
+            opacity: .3;
+            pointer-events: none;
+        }
+    }
+
+    &__control--down {
+        margin-left: 10px;
+
+        @include caret(down);
+
+        &.-disabled {
+            opacity: .3;
+            pointer-events: none;
+        }
+    }
+
+    &--compact {
+        background: transparent;
+
+        #{$s}__controls {
+            background: $black;
+            left:0;
+            right:0;
+            margin: auto;
+            padding-right: 20px;
+            padding-left: 20px;
+            width: 90px;
+            height: 40px;
+            padding-top: 5px;
+        }
+    }
+}

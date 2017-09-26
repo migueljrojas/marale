@@ -1,0 +1,30 @@
+[
+    {
+        "name":"Inicio",
+        "url":"/"
+    },
+    {
+        "name":"Bodega",
+        "url":"/bodega"
+    },
+    {
+        "name":"Wine Hotel",
+        "url":"/winehotel"
+    },
+    {
+        "name":"Franc 162",
+        "url":"/restaurant"
+    },
+    {
+        "name":"Vinos",
+        "url":"#vinos"
+    },
+    {
+        "name":"Valle de Pedernal",
+        "url":"#valle"
+    },
+    {
+        "name":"Contacto",
+        "url":"#contacto"
+    }
+]

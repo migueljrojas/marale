@@ -1,6 +1,29 @@
-mixin footer(spec)
-  - spec = spec || {}
-  - spec.__class = spec.__class || ''
-
-  div(class=spec.__class)&attributes(attributes)
-    p This is an example paragraph for the footer module
+footer.footer
+    .container.footer__container
+        
+        .footer__logo.wow.fadeInDown
+            a(href="/")
+                img(src="/images/logo-white.png")
+        
+        .footer__data        
+            p.footer__address= site.data.footer.address 
+            a.footer__mail(href="mailto:#{site.data.footer.mail}")= site.data.footer.mail
+            a.footer__tel(href="tel:#{site.data.footer.tel}")= site.data.footer.tel
+        
+        .footer__social
+            ul.footer__social__list
+                each red in site.data.social
+                    li
+                        a(href=red.url, target="_blank")
+                            i(class="fa fa-#{red.name}")
+        
+        nav.footer__nav
+            ul.footer__menu
+                each item in site.data.header
+                    li
+                        a(href=item.url)= item.name
+                        if item.submenu
+                            ul.footer__submenu
+                                each link in item.submenu
+                                    li
+                                        a(href=link.url)= link.name

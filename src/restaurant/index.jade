@@ -1,8 +1,101 @@
 extends ../_layouts/base
 
+include ../_modules/slider/slider
+include ../_modules/scroll-bar/scroll-bar
+
+block meta
+    meta(name="keywords", content="magnum, doble magnum, imperial, 5 estrellas, hotel, boutique, alojamiento, marale wine hotel, marale hotel, marale boutique, wine hotel, hotel san juan, hotel mendoza")
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p restaurant page
+    main.resto
+        section#hero.resto__hero
+            .resto__hero__overlay
+            .resto__hero__data
+                h1.resto__hero__title
+                    img(src="/images/home/resto-logo.png", alt=site.data.resto.hero.title, title=site.data.resto.hero.title)
+
+        section#viva.resto__viva
+            .container
+                .row
+                    .col-xs-24.col-sm-12
+                        h2.resto__viva__title= site.data.resto.viva.title
+                    .col-xs-24.col-sm-12
+                        p.resto__viva__text= site.data.resto.viva.text
+                .row.nopadding-xs
+                    .col-xs-24
+                        img.resto__viva__img.img-responsive.wow.fadeInUp(src="/images/resto/franc162.jpg")
+
+        section#showcase.resto__showcase
+            +slider('resto__showcase__slider')
+                each slide in site.data.resto.showcase.list
+                    .resto__showcase__slide(style="background:url('#{slide.img}') no-repeat center center fixed; background-size:cover;")
+                        .resto__showcase__slide__overlay
+            .resto__showcase__slide__data
+                h3.resto__showcase__slide__title= site.data.resto.showcase.title
+                p.resto__showcase__slide__desc= site.data.resto.showcase.desc
+
+        section#experience.resto__experience
+            .resto__experience__top
+                .container
+                    .row
+                        .col-xs-24.col-sm-12.col-sm-offset-6
+                            h2.resto__experience__title= site.data.resto.experience.title
+                            p.resto__experience__desc= site.data.resto.experience.desc
+            .resto__experience__bottom
+                +slider('resto__experience__slider')
+                    each slide in site.data.resto.experience.slider
+                        .resto__experience__slide(style="background:url('#{slide.img}') no-repeat center center fixed; background-size:cover;")
+            
+        section#dishes.resto__dishes
+            .container
+                .row.nopadding-xs
+                    .col-xs-24.col-sm-12
+                        img.resto__dishes__img.wow.fadeInUp(src="/images/resto/plato1.jpg")
+                        .row.nopadding-xs.bodega__finca__img--row
+                            .col-xs-24.col-sm-20.pull-right
+                                img.resto__dishes__img.wow.fadeInUp(src="/images/resto/plato3.jpg")
+                    .col-xs-24.col-sm-12
+                        p.resto__dishes__text= site.data.resto.dishes.text
+                        img.resto__dishes__img.wow.fadeInUp(src="/images/resto/plato2.jpg")
+
+        section#contacto.resto__contact
+            .resto__contact__col.resto__contact__col--form
+                .resto__contact__container
+                    h2.resto__contact__title ¿Le gustaría Visitarnos?
+                    form.resto__contact__form
+                        .resto__contact__group
+                            label.resto__contact__label Nombre
+                            input.resto__contact__input(type="text")
+                        .resto__contact__group
+                            label.resto__contact__label Apellido
+                            input.resto__contact__input(type="text")
+                        .resto__contact__group
+                            label.resto__contact__label Email
+                            input.resto__contact__input(type="email")
+                        .resto__contact__group
+                            label.resto__contact__label Pais
+                            select.resto__contact__input(value="")
+                                option
+                                option País 1
+                                option País 2
+                                option País 3
+                        .resto__contact__group
+                            label.resto__contact__label Teléfono
+                            input.resto__contact__input(type="text")
+                        .resto__contact__group
+                            label.resto__contact__label Fecha
+                            input.resto__contact__input(type="date")
+                        .resto__contact__group.resto__contact__group--textarea
+                            label.resto__contact__label Mensaje
+                            input.resto__contact__input(type="textarea")
+                        
+                        button._button.-black Enviar
+                        
+            .resto__contact__col.resto__contact__col--img
+                img.resto__contact__img(src="/images/resto/contact.jpg")
+
+    +scroll-bar('compact')

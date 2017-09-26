@@ -1,0 +1,28 @@
+{
+    "hero":{
+        "title":"Bodega y Viñedos"
+    },
+    "location":{
+        "title": "Dónde Estamos",
+        "desc": "Ubicada en el departamento de Sarmiento, San Juan, su emplazamiento es estratégico para la producción así como para la recepción de turismo. A 100 km de Mendoza, 60 km de la Ciudad de San Juan y a 15 minutos de los 1.400 MSNM del valle sanjuanino más alto, el Valle de Pedernal, de donde provienen nuestras mejores uvas."
+    },
+    "showcase":[
+        {
+            "img":"/images/bodega/slide1.jpg",
+            "desc":"La bodega utiliza tecnología de ultima generación y técnica de bodega boutique. Sin embargo, la capacidad en tanque de acero inoxidable alcanza los 440.000 litros y posee una cava con capacidad para 100 barricas."
+        },
+        {
+            "img":"/images/bodega/slide2.jpg",
+            "desc":"La bodega utiliza tecnología de ultima generación y técnica de bodega boutique. Sin embargo, la capacidad en tanque de acero inoxidable alcanza los 440.000 litros y posee una cava con capacidad para 100 barricas."
+        }
+    ],
+    "finca":{
+        "title":"La Finca",
+        "desc":"La finca donde se encuentra la bodega está a cargo del ingeniéro agrónomo Rodrigo Barrera. Tiene 25 hectáreas de las cuales 18 están cultivadas con Sauvignon Blanc, Syrah, Cabernet Franc, Malbec y Tannat. La producción por hectárea promedio es de 8 toneladas en uva tinta y de 10/12 tonelada en uva blanca.",
+        "text": [
+            "Desde nuestros viñedos en el Valle de Pedernal llegan nuestras mejores uvas. Un paraíso vitivinícola que se encuentra a unos 1.400 MSNM, a unos 70km de nuestra bodega en Sarmiento.",
+            "Protegido por cerros y montañas que superan los 2.500 metros de altura, el Valle de Pedernal  se caracteriza por un clima más fresco que la media cuyana. Su amplitud térmica es debida al eje de vientos norte-sur.",
+            "Sus suelos, de tipo aluvial, están compuestos por gravas angulosas y planas, entre las que se encuentra el calcáreo y el sílex (o Pedernal), con arena, limo y arcilla."
+        ]
+    }
+}

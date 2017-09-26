@@ -1,0 +1,153 @@
+{
+    "hero": {
+        "title": "Un oasis en san juan",
+        "desc": "Un proyecto eno-turístico único para la zona. Bodega, wine-hotel y restaurante en Sarmiento.",
+        "slider": [
+            {
+                "img":"/images/home/hero.jpg"
+            },
+            {
+                "img":"/images/home/hero2.jpg"
+            },
+            {
+                "img":"/images/home/hero3.jpg"
+            }
+        ]
+    },
+    "marale": {
+        "title": "Visite Marale",
+        "desc": "En el corazón de Sarmiento, San Juan, ofrecemos una experiencia integral que combina viñedos y vinos con gastronomía y hospedaje de 1° nivel. Podrá hacer una visita guiada por nuestra bodega y conocer más acerca de nuestros vinos, provenientes en su mayoría de viñedos ubicados en las mejores laderas del Valle de Pedernal.",
+        "button": {
+            "url": "/bodega",
+            "text": "Conozca más"
+        },
+        "content": [
+            "Marale es un proyecto familiar, 100% capital argentino, y debe su nombre a la fusión de nombres de los 2 hermanos que están al frente de la bodega, Marcelo y Alejandro Castro. Lejos de los planes originales, que sólo proyectaban la realización de una bodega que pudiera expresar lo mejor de los suelos sanjuaninos, Marale es un complejo que se compone además por el wine-hotel boutique y su restaurante, Franc162. El complejo busca diariamente entregar una experiencia enológica y gastronómica holística combinando viñedo, paisaje, sabor y placer.",
+            "Todo empezó con la cosecha del 2012, cuando se inaugura simultáneamente la bodega. Luego se desarrolló el complejo turístico a partir de 2014, con inauguración el pasado 29 de abril del 2017. Hoy nuestro desafío diario es transmitir a través de nuestros vinos y nuestras experiencias, lo más original y auténtico de San Juan."
+        ]
+    },
+    "places":{
+        "hotel":{
+            "logo":"/images/home/hotel-logo.png",
+            "desc": "Un alojamiento boutique que realza los sentidos, rodeado de viñedos y paisajes de los Andes.",
+            "button": {
+                "url": "/winehotel",
+                "text": "Descubrir"
+            }
+        },
+        "resto":{
+            "logo":"/images/home/resto-logo.png",
+            "desc": "Una propuesta gastronómica distinta, que propone conocer los sabores de la zona en un lugar único.",
+            "button": {
+                "url": "/restaurant",
+                "text": "Descubrir"
+            }
+        }
+    },
+    "wine": {
+        "bottles": [
+            {
+                "name": "Blend",
+                "img": "/images/home/blend.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Frutos silvestres y violetas con exquisita complejidad.",
+                "ficha":{
+                    "url":"/images/fichas/blend.jpg",
+                    "data":{
+                        "composicion":"75% Syrah, 15% Malbec, 5% Cabernet Franc, 5% Tannat",
+                        "origen":"Valle de Pedernal, Zonda y Tulum, Sarmiento - San Juan Argentina"
+                    }
+                }
+            },
+            {
+                "name": "Malbec",
+                "img": "/images/home/malbec-1.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Vino joven, de agradable concentración y estructura, frutado y vivaz. Con notas de frutos rojos.",
+                "ficha":{
+                    "url":"/images/fichas/malbec.jpg",
+                    "data":{
+                        "composicion":"100% Malbec",
+                        "origen":"Valle de Pedernal, Zonda y Tulum, Sarmiento - San Juan Argentina"
+                    }
+                }
+            },
+            {
+                "name": "Suavignon Blanc",
+                "img": "/images/home/blanc.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Vino joven, floral, acidez fresca y crujiente que expresa mineralidad y características cítricas.",
+                "ficha":{
+                    "url":"/images/fichas/suavignon-blanc.jpg",
+                    "data":{
+                        "composicion":"100% Suavignon Blanc",
+                        "origen":" Valle de Tulum, San Juan Argentina"
+                    }
+                }
+            },
+            {
+                "name": "Cabernet Franc",
+                "img": "/images/home/cabernet-franc.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Vino joven. Elegante varietal de aroma frutado y armónico.",
+                "ficha":{
+                    "url":"/images/fichas/cabernet-franc.jpg",
+                    "data":{
+                        "composicion":"100% Cabermet Franc",
+                        "origen":"Valle de Pedernal, Zonda y Tulum, Sarmiento - San Juan Argentina"
+                    }
+                }
+            },
+            {
+                "name": "Malbec Reserva",
+                "img": "/images/home/malbec-2.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Frutos rojos, con sutil recuerdo a vainilla y chocolate, aterciopelado, untuoso y vivaz.",
+                "ficha":{
+                    "url":"/images/fichas/malbec-reserva.jpg",
+                    "data":{
+                        "composicion":"100% Malbec",
+                        "origen":"Valle de Pedernal - San Juan Argentina",
+                        "crianza":"6 a 12 meses de barrica de roble francés en un 50%",
+                        "estiba": "6 meses en botella",
+                        "guarda": "5 a 7 años"
+                    }
+                }
+            },
+            {
+                "name": "Malbec Gran Reserva",
+                "img": "/images/home/malbec.png",
+                "button": {
+                    "url": "#",
+                    "text": "Descubrir"
+                },
+                "desc": "Gran equilibrio y cuerpo. Frutos y especias, con notas de chocolate y vainilla.",
+                "ficha":{
+                    "url":"/images/fichas/malbec-gran-reserva.jpg",
+                    "data":{
+                        "composicion":"100% Malbec",
+                        "origen":"Valle de Pedernal - San Juan Argentina",
+                        "crianza":"12 a 18 meses de barrica de roble francés en un 50%",
+                        "estiba": "12 meses en botella",
+                        "guarda": "7 a 10 años"
+                    }
+                }
+            }
+        ]
+    }
+}

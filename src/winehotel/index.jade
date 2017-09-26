@@ -1,8 +1,107 @@
 extends ../_layouts/base
 
+include ../_modules/slider/slider
+include ../_modules/scroll-bar/scroll-bar
+
+block meta
+    meta(name="keywords", content="gastronomia, san juan, franc162, restaurante, resto, almuerzo, cena, show en vivo, cubierto, plan san juan, que hacer en san juan, sarmiento")
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p winehotel page
+    main.hotel
+        section#hero.hotel__hero
+            .hotel__hero__overlay
+            .hotel__hero__data
+                h1.hotel__hero__title
+                    img(src="/images/home/hotel-logo.png", alt=site.data.hotel.hero.title, title=site.data.hotel.hero.title)
+
+        section#viva.hotel__viva
+            .container
+                .row
+                    .col-xs-24
+                        h2.hotel__viva__title= site.data.hotel.viva.title
+                    .col-xs-24.col-sm-12
+                        p.hotel__viva__text= site.data.hotel.viva.text[0]
+                    .col-xs-24.col-sm-12
+                        p.hotel__viva__text= site.data.hotel.viva.text[1]
+                .row.nopadding-xs
+                    .col-xs-24
+                        img.hotel__viva__img.img-responsive.wow.fadeInUp(src="/images/hotel/vive360.jpg")
+
+        section#showcase.hotel__showcase
+            +slider('hotel__showcase__slider')
+                each slide in site.data.hotel.showcase
+                    .hotel__showcase__slide(style="background:url('#{slide.img}') no-repeat center center fixed; background-size:cover;")
+                        .hotel__showcase__slide__overlay
+                        .hotel__showcase__slide__data
+                            h3.hotel__showcase__slide__title= slide.title
+                            p.hotel__showcase__slide__desc= slide.desc
+
+        section#experience.hotel__experience
+            .hotel__experience__top
+                .container
+                    .row
+                        .col-xs-24.col-sm-12.col-sm-offset-6
+                            h2.hotel__experience__title= site.data.hotel.experience.title
+                            p.hotel__experience__desc= site.data.hotel.experience.desc
+            .hotel__experience__bottom
+            
+        section#features.hotel__features
+            .container
+                .row
+                    .col-xs-24.col-sm-16.col-sm-offset-4
+                        h3.hotel__features__title= site.data.hotel.features.title
+                        ul.hotel__features__list
+                            each item in site.data.hotel.features.list
+                                li.hotel__features__feature
+                                    .hotel__features__feature__icon
+                                        img(src="/images/hotel/icon-#{item.icon}.png")
+                                    span.hotel__features__feature__text=item.text
+                .row
+                    .col-xs-24
+                        h4.hotel__features__subtitle= site.data.hotel.features.subtitle
+                        ul.hotel__features__list.hotel__features__list--extra
+                            each item in site.data.hotel.features.extra
+                                li.hotel__features__feature
+                                    img.hotel__features__feature__icon(src="/images/hotel/icon-#{item.icon}.png")
+                                    span.hotel__features__feature__text=item.text
+        section#contacto.hotel__contact
+            .hotel__contact__col.hotel__contact__col--form
+                .hotel__contact__container
+                    h2.hotel__contact__title ¿Le gustaría Visitarnos?
+                    form.hotel__contact__form
+                        .hotel__contact__group
+                            label.hotel__contact__label Nombre
+                            input.hotel__contact__input(type="text")
+                        .hotel__contact__group
+                            label.hotel__contact__label Apellido
+                            input.hotel__contact__input(type="text")
+                        .hotel__contact__group
+                            label.hotel__contact__label Email
+                            input.hotel__contact__input(type="email")
+                        .hotel__contact__group
+                            label.hotel__contact__label Pais
+                            select.hotel__contact__input(value="")
+                                option
+                                option País 1
+                                option País 2
+                                option País 3
+                        .hotel__contact__group
+                            label.hotel__contact__label Teléfono
+                            input.hotel__contact__input(type="text")
+                        .hotel__contact__group
+                            label.hotel__contact__label Fecha
+                            input.hotel__contact__input(type="date")
+                        .hotel__contact__group.hotel__contact__group--textarea
+                            label.hotel__contact__label Mensaje
+                            input.hotel__contact__input(type="textarea")
+                        
+                        button._button.-black Enviar
+                        
+            .hotel__contact__col.hotel__contact__col--img
+                img.hotel__contact__img(src="/images/hotel/contact.jpg")
+
+    +scroll-bar('compact')

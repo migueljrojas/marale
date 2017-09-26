@@ -1,8 +1,99 @@
 extends ../_layouts/base
 
+include ../_modules/slider/slider
+include ../_modules/scroll-bar/scroll-bar
+
 block config
   //- Correct base url pathing for this page
   - var baseUrl = '../'
 
 block content
-  p bodega page
+    main.bodega
+        section#hero.bodega__hero
+            .bodega__hero__data
+                h1.bodega__hero__title= site.data.bodega.hero.title
+        
+        section#location.bodega__location
+            .container
+                .row
+                    .col-xs-24.col-sm-12
+                        h2.bodega__location__title= site.data.bodega.location.title
+                    .col-xs-24.col-sm-12
+                        p.bodega__location__text= site.data.bodega.location.desc
+                .row.nopadding
+                    .col-xs-24.col-sm-12
+                        img.bodega__location__img.img-responsive.wow.fadeInUp(src="/images/bodega/map.jpg")
+                    .col-xs-24.col-sm-12
+                        img.bodega__location__img.img-responsive.wow.fadeInUp(src="/images/bodega/grapes.jpg")
+                        
+        section#showcase.bodega__showcase
+            +slider('bodega__showcase__slider')
+                each slide in site.data.bodega.showcase
+                    .bodega__showcase__slide(style="background:url('#{slide.img}') no-repeat center center fixed; background-size:cover;")
+                        .bodega__showcase__slide__overlay
+                        .bodega__showcase__slide__data
+                            p.bodega__showcase__slide__desc= slide.desc
+        
+        section#finca.bodega__finca
+            .bodega__finca__top
+                .container
+                    .row
+                        .col-xs-24.col-sm-8.col-md-6
+                            h2.bodega__finca__title= site.data.bodega.finca.title
+                        .col-xs-24.col-sm-16.col-md-18
+                            p.bodega__finca__desc= site.data.bodega.finca.desc
+            .bodega__finca__middle
+                
+            .bodega__finca__bottom
+                .container
+                    .row.nopadding-xs
+                        .col-xs-24
+                            img.bodega__finca__img.wow.fadeInUpBig(src="/images/bodega/finca1.jpg")
+                        .col-xs-24.col-sm-10
+                            each p, index in site.data.bodega.finca.text
+                                p.bodega__finca__text= p
+                            img.bodega__finca__img.wow.fadeInUpBig(src="/images/bodega/finca3.jpg")
+                            .row.nopadding-xs.bodega__finca__img--row
+                                .col-xs-24.col-sm-20.pull-right
+                                    img.bodega__finca__img.wow.fadeInUpBig(src="/images/bodega/finca4.jpg")
+                        .col-xs-24.col-sm-14
+                            img.bodega__finca__img.wow.fadeInUpBig(src="/images/bodega/finca2.jpg")
+                            img.bodega__finca__img.wow.fadeInUpBig(src="/images/bodega/finca5.jpg")
+                            
+        section#contacto.bodega__contact
+            .bodega__contact__col.bodega__contact__col--form
+                .bodega__contact__container
+                    h2.bodega__contact__title ¿Le gustaría Visitarnos?
+                    form.bodega__contact__form
+                        .bodega__contact__group
+                            label.bodega__contact__label Nombre
+                            input.bodega__contact__input(type="text")
+                        .bodega__contact__group
+                            label.bodega__contact__label Apellido
+                            input.bodega__contact__input(type="text")
+                        .bodega__contact__group
+                            label.bodega__contact__label Email
+                            input.bodega__contact__input(type="email")
+                        .bodega__contact__group
+                            label.bodega__contact__label Pais
+                            select.bodega__contact__input(value="")
+                                option
+                                option País 1
+                                option País 2
+                                option País 3
+                        .bodega__contact__group
+                            label.bodega__contact__label Teléfono
+                            input.bodega__contact__input(type="text")
+                        .bodega__contact__group
+                            label.bodega__contact__label Fecha
+                            input.bodega__contact__input(type="date")
+                        .bodega__contact__group.bodega__contact__group--textarea
+                            label.bodega__contact__label Mensaje
+                            input.bodega__contact__input(type="textarea")
+                        
+                        button._button.-black Enviar
+                        
+            .bodega__contact__col.bodega__contact__col--img
+                img.bodega__contact__img(src="/images/bodega/contact.jpg")
+                
+    +scroll-bar('compact')

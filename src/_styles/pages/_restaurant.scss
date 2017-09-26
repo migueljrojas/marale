@@ -1,0 +1,326 @@
+.resto {
+    &__hero {
+        height: 90vh;
+        overflow: hidden;
+        position: relative;
+        background: url('/images/resto/hero.jpg') no-repeat center center;
+        background-size: cover;
+
+        @include mq(sm){
+            background: url('/images/resto/hero.jpg') no-repeat center center fixed;
+            background-size: cover;
+        }
+
+        &__overlay {
+            @include overlay(.3);
+        }
+
+        &__data {
+            position: absolute;
+            top:50%;
+            transform: translateY(-50%);
+            z-index: 5;
+            color:$white;
+            text-align: center;
+            left:0;
+            right:0;
+            margin: auto;
+            max-width: 800px;
+            width: 90%;
+
+            @include mq(sm){
+                width: 75%;
+            }
+        }
+
+        &__title {
+            @include title($align: 'center');
+
+            @include mq(md){
+                font-size: $head/1.5;
+            }
+
+            @include mq(lg){
+                font-size: $head;
+            }
+        }
+    }
+
+    &__viva {
+        @include padd;
+
+        @include mq(xs){
+            padding-bottom: 0;
+        }
+
+        background: $bgSecondary;
+        color: $white;
+
+        &__title {
+            @include title($xxl);
+            margin: 0 0 10px;
+            @include mq(sm) {
+                margin: 0 0 20px;
+            }
+        }
+
+        &__text {
+            margin: 10px 0;
+            @include mq(sm) {
+                margin: 0 0 100px;
+            }
+        }
+
+        &__img {
+            width: 100%;
+        }
+    }
+
+    &__showcase{
+        position: relative;
+
+        &__slider {
+            margin-bottom: 0!important;
+        }
+
+        &__slide{
+            $s: &;
+
+            height: 90vh;
+            position: relative;
+
+            &__data {
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                z-index: 5;
+                color:$white;
+                text-align: center;
+                left:0;
+                right:0;
+                margin: auto;
+                max-width: 800px;
+                width: 90%;
+
+                @include mq(sm){
+                    width: 300px;
+                    left: initial;
+                    top:50%;
+                    right: 15%;
+                    text-align: left;
+                }
+            }
+        }
+    }
+
+    &__experience {
+        &__top {
+            background: $bg;
+            padding: 20px 0;
+
+            @include mq(sm){
+                padding: 40px 0;
+            }
+        }
+
+        &__slider {
+            margin-bottom: 0!important;
+        }
+
+        &__slide{
+            $s: &;
+
+            height: 70vh;
+            position: relative;
+
+            &__data {
+                position: absolute;
+                top:50%;
+                transform: translateY(-50%);
+                z-index: 5;
+                color:$white;
+                text-align: center;
+                left:0;
+                right:0;
+                margin: auto;
+                max-width: 800px;
+                width: 90%;
+
+                @include mq(sm){
+                    width: 300px;
+                    left: initial;
+                    top:50%;
+                    right: 15%;
+                    text-align: left;
+                }
+            }
+        }
+
+        &__title {
+            @include title($xxl, $color: $lila);
+            margin: 0 0 10px;
+            @include mq(md) {
+                margin: 0 0 20px;
+            }
+        }
+    }
+
+    &__dishes {
+        @include padd;
+
+        background: $lightestGray;
+
+        &__text {
+            margin: 10px 0;
+            padding: 0 15px;
+            @include mq(sm) {
+                width: 60%;
+                margin: 80px auto;
+            }
+        }
+
+        &__img {
+            width: 100%;
+            margin-bottom: 20px;
+
+            @include mq(md) {
+                margin-bottom: 40px;
+            }
+
+            &--row {
+                @include mq(xs){
+                    margin: 0;
+                }
+            }
+        }
+    }
+
+    &__contact {
+        $c: &;
+
+        background: $bg;
+        color: $darkestGray;
+        display: block;
+
+        @include mq(sm){
+            display: flex;
+            flex-direction: row;
+        }
+
+        &__col {
+            position: relative;
+            flex-basis: 100%;
+            width: 100%;
+            display: block;
+
+            @include mq(sm){
+                display: flex;
+                flex-basis: 50%;
+                width: 50%;
+            }
+
+            &--form {
+                padding: 8% 0;
+                background: $white;
+
+                @include mq(sm){
+                    justify-content: flex-end;
+                }
+            }
+
+            &--img {
+                @include mq(sm){
+                    overflow: hidden;
+                }
+            }
+        }
+
+        &__container{
+            padding: 0 20px;
+
+            @include mq(sm){
+                width: (732px/2);
+            }
+            @include mq(md){
+                width: (952px/2);
+
+            }
+            @include mq(lg){
+                width: (1152px/2);
+            }
+        }
+
+        &__title {
+            @include title($size: $xxl, $color: $black);
+            margin-bottom: 20px;
+
+            @include mq(md){
+                width: 70%;
+            }
+        }
+
+        &__form,
+        &__desc {
+            margin-bottom: 20px;
+
+            @include mq(md){
+                width: 70%;
+            }
+        }
+
+        &__group {
+            border-bottom: 1px solid $lightGray - #111;
+            padding: 7px 0;
+            display: flex;
+            align-items: baseline;
+
+            &--half {
+                @include mq(sm){
+                    display: inline-block;
+                    width: calc(50% - 10px);
+                    margin-right: 7px;
+
+                    #{$c}__input {
+                        width: 100%;
+                    }
+                }
+            }
+        }
+
+        &__label{
+            margin: 0;
+            font-size:$xs;
+            width: 70px;
+        }
+
+        &__input {
+            border:none;
+            width: calc(100% - 70px);
+            padding: 3px;
+            background: $white;
+
+            &:focus {
+                @include trans;
+
+                background: $lightestGray;
+                outline: none;
+                box-shadow: none;
+            }
+        }
+
+        &__img {
+            width:100%;
+            height: auto;
+
+            @include mq(sm){
+                height: 100%;
+                width: auto;
+            }
+        }
+
+        ._button {
+            float: right;
+            margin-top: 20px;
+        }
+    }
+}
